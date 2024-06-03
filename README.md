@@ -26,7 +26,7 @@ gh repo clone georgitsvetkov/gt_weather
 cd gt_weather
 ```
 
-2. Build local docker image
+2. Build local docker image:
    
 ```
 docker build -t weather -f Dokerfile .
@@ -43,7 +43,7 @@ Example:
 docker run -e api_key=<api_key> -e TZ=Europe/Amsterdam -e lat=52.377 -e lon=4.8970  weather shine
 ```
 
-4. Stop container and clean environment
+4. Stop container and clean environment:
 
 Stop container using `Ctrl + C` 
 Remove created docker image ```docker image remove -f weather```
