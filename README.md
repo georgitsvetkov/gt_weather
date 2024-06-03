@@ -28,11 +28,15 @@ cd gt_weather
 
 2. Build local docker image
    
-`docker build -t weather -f Dokerfile .`
+```
+docker build -t weather -f Dokerfile .
+```
 
 3. Run docker container, using the local build image and pass required container environment variables, together with the line argument (`rain` | `shine`):
-   
-`docker run -e api_key=<api_key> -e TZ=<timezone_location> -e lat=<latitude_value> -e lon=<longitude_value> weather <command_line_argument>`
+
+```
+docker run -e api_key=<api_key> -e TZ=<timezone_location> -e lat=<latitude_value> -e lon=<longitude_value> weather <command_line_argument>
+```
 
 Example:
 ```
@@ -42,5 +46,5 @@ docker run -e api_key=<api_key> -e TZ=Europe/Amsterdam -e lat=52.377 -e lon=4.89
 4. Stop container and clean environment
 
 Stop container using `Ctrl + C` 
-Remove created docker image `docker image remove -f weather`
+Remove created docker image ```docker image remove -f weather```
 
